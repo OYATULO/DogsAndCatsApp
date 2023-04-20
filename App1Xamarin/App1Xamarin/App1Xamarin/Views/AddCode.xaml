@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1Xamarin.Views.AddCode"
+             Title="Verification"
+             Padding="20,50,20,0"
+             >
+  <ContentPage.Content>
+      <StackLayout Orientation="Vertical" Padding="10,0,10,0" Margin="0,0,0,0" VerticalOptions="Start">
+            <Label Text="Enter your  " TextColor="Black" FontSize="24" FontAttributes="Bold"  HorizontalTextAlignment="Start"/>
+            <Label Text="Verification code "  TextColor="Black" FontSize="24" FontAttributes="Bold"  HorizontalTextAlignment="Start"/>
+            <FlexLayout Direction="Row" AlignContent="Center" AlignItems="Center" JustifyContent="SpaceEvenly"  Margin="18,20,18,20" >
+                <Frame BorderColor="Gray" Padding="8" HeightRequest="50"  CornerRadius="5" >
+                    <Entry Margin="0,-30,0,-30" TextChanged="txt1_TextChanged" x:Name="txt1" FontSize="25" MaxLength="1" HorizontalTextAlignment="Center" Text="" Placeholder="#" PlaceholderColor="Gray"/>
+                </Frame>
+                <Frame BorderColor="Gray" Padding="8" HeightRequest="50"  CornerRadius="5" >
+                    <Entry Margin="0,-30,0,-30" TextChanged="txt2_TextChanged" x:Name="txt2" FontSize="25" MaxLength="1" HorizontalTextAlignment="Center" Text="" Placeholder="#" PlaceholderColor="Gray"/>
+                </Frame>
+                <Frame BorderColor="Gray" Padding="8" HeightRequest="50"  CornerRadius="5" >
+                    <Entry Margin="0,-30,0,-30" TextChanged="txt3_TextChanged" x:Name="txt3" FontSize="25" MaxLength="1" HorizontalTextAlignment="Center" Text="" Placeholder="#" PlaceholderColor="Gray"/>
+                </Frame>
+                <Frame BorderColor="Gray" Padding="8" HeightRequest="50"  CornerRadius="5" >
+                    <Entry Margin="0,-30,0,-30" TextChanged="txt4_TextChanged" x:Name="txt4" FontSize="25" MaxLength="1" HorizontalTextAlignment="Center" Text="" Placeholder="#" PlaceholderColor="Gray"/>
+                </Frame>
+            </FlexLayout>
+            <Label Text="04:59" TextColor="Black" FontSize="26" FontAttributes="Bold"  HorizontalTextAlignment="Start"/>
+            <Label Text="The verification code send to your Email myemail******98@gmail.com. You can check inbox. " LineHeight="1.2" TextColor="Black" FontSize="18" FontAttributes="None"  HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand"/>
+            <FlexLayout Direction="Row" >
+                <Label Text="I didn't receivid the code ? " TextColor="Black" FontSize="18" FontAttributes="None"  HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand"/>
+                <Label Text="Send again" TextDecorations="Underline" TextColor="OrangeRed" FontSize="20" FontAttributes="None"  HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" x:Name="text"  />
+            </FlexLayout>
+            <Button Margin="0,30,0,20" Text="Veryfy" FontSize="15" HeightRequest="50" CornerRadius="10" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1Xamarin.Views.MainPage"
+             xmlns:local="clr-namespace:App1Xamarin.Models"
+            Title="HomePage"  x:DataType="local:NewUsers" >
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Spacing="20" HorizontalOptions="Center">
+            <Label Text="It is home page!" FontSize="30" />
+            <Label Text="" x:Name="username" FontSize="25" TextColor="Blue" />
+            <Button Text="Accessories" Clicked="OpenAccssesories" WidthRequest="50" HeightRequest="50" CornerRadius="20" />
+            <Button Text="Reset password" Clicked="ressetBnt" WidthRequest="50" HeightRequest="50" CornerRadius="20" />
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

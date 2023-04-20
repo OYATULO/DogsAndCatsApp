@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1Xamarin.Views.ViewDogs"
+             xmlns:local="clr-namespace:App1Xamarin.ViewModels"
+             xmlns:model="clr-namespace:App1Xamarin.Models"
+             >
+    <RefreshView x:DataType="local:DogsViewModel" Command="{Binding LoadDogsViewmodel}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+
+
+
+        <CollectionView x:Name="CatslistView"
+                ItemsSource="{Binding ItemDogs}"
+                SelectionMode="None" Margin="10"  >
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="10" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame   CornerRadius="5"  BorderColor="#2000" >
+                        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="4" Padding="10" x:DataType="model:ModelDogs">
+
+                            <Image Source="{Binding Image}" Scale="1.2"  HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Label Text="{Binding Title}" TextColor="Gray"  HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="20"  />
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:DogsViewModel}}, Path=ItemTapped}"		
+                                    CommandParameter="{Binding .}">
+                                </TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </Frame>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
+    </RefreshView>
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1Xamarin.Views.ressetPage"
+              Padding="20,50,20,0"
+             Title="Resset password"
+             >
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start" Orientation="Vertical" HorizontalOptions="Center" >
+            <Image  Source="cat1"  Aspect="AspectFit"  WidthRequest="250" HeightRequest="250"  HorizontalOptions="Center"  />
+            <Label Text="Create new password" TextColor="Black" FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="center" FontAttributes="Bold"/>
+            <Label Text="Your new password must be diferent previous used password " TextColor="Gray" FontSize="16" TextType="Text" HorizontalTextAlignment="center"/>
+            <Frame CornerRadius="10"   Margin="0,30,0,20" HasShadow="False" HeightRequest="5"  BackgroundColor="#1000">
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <Image Source="lock" WidthRequest="24" Aspect="AspectFit" Margin="-10,-10,5,0" HorizontalOptions="Start" HeightRequest="24"/>
+                    <Entry Text="" x:Name="Password" WidthRequest="280" HorizontalTextAlignment="Start" HorizontalOptions="Center"    Margin="0,-30,0,-30"  Placeholder="Password" PlaceholderColor="Gray"/>
+                    <Image Source="eye" WidthRequest="24"  Aspect="AspectFit" Margin="-10,-10,0,-10" HorizontalOptions="End" HeightRequest="24" />
+                </FlexLayout>
+            </Frame>
+            <Frame CornerRadius="10"   Margin="0,0,0,20" HasShadow="False" HeightRequest="5"  BackgroundColor="#1000">
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <Image Source="lock" WidthRequest="24" Aspect="AspectFit" Margin="-10,-10,5,0" HorizontalOptions="Start" HeightRequest="24"/>
+                    <Entry Text="" x:Name="CPassword" WidthRequest="280" HorizontalTextAlignment="Start" HorizontalOptions="Center"    Margin="0,-30,0,-30"  Placeholder="Confirm password" PlaceholderColor="Gray"/>
+                    <Image Source="eye" WidthRequest="24"  Aspect="AspectFit" Margin="-10,-10,0,-10" HorizontalOptions="End" HeightRequest="24" />
+                </FlexLayout>
+            </Frame>
+
+            <Button Text="Create" BackgroundColor="Black" TextColor="white" CornerRadius="10" HeightRequest="50" Clicked="Button_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

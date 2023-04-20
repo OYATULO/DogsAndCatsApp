@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1Xamarin.Views.loginpage"
+             Shell.NavBarIsVisible="False"
+             Shell.FlyoutItemIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
+             Padding="10,10,10,10"
+             >
+    <ContentPage.Content>
+
+        <StackLayout VerticalOptions="Start" Orientation="Vertical" HorizontalOptions="Center" >
+            <Image  Source="cat1"  Aspect="AspectFit"  WidthRequest="250" HeightRequest="250"  HorizontalOptions="Center"  />
+            <Label Text="Login!" TextColor="Black" FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="center" FontAttributes="Bold"/>
+            <Frame CornerRadius="10"   Margin="0,30,0,20" HasShadow="False" HeightRequest="5"  BackgroundColor="#1000">
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <Image Source="mail" WidthRequest="24" Aspect="AspectFit" Margin="-10,-10,5,0" HorizontalOptions="Start" HeightRequest="24"/>
+                    <Entry Text="" x:Name="email" WidthRequest="280" HorizontalTextAlignment="Start" HorizontalOptions="Center"    Margin="0,-30,0,-30"  Placeholder="Enter email..." PlaceholderColor="Gray"/>
+                    <Image Source="eye" WidthRequest="24"  Aspect="AspectFit" Margin="-10,-10,0,-10" HorizontalOptions="End" HeightRequest="24" />
+                </FlexLayout>
+            </Frame>
+            <Frame CornerRadius="10"   Margin="0,0,0,20" HasShadow="False" HeightRequest="5"  BackgroundColor="#1000">
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <Image Source="lock" WidthRequest="24" Aspect="AspectFit" Margin="-10,-10,5,0" HorizontalOptions="Start" HeightRequest="24"/>
+                    <Entry Text="" x:Name="password" WidthRequest="280" HorizontalTextAlignment="Start" HorizontalOptions="Center"    Margin="0,-30,0,-30"  Placeholder="Enter password" PlaceholderColor="Gray"/>
+                    <Image Source="eye" WidthRequest="24"  Aspect="AspectFit" Margin="-10,-10,0,-10" HorizontalOptions="End" HeightRequest="24" />
+                </FlexLayout>
+            </Frame>
+
+            <Button Text="Login" BackgroundColor="Black" TextColor="white" CornerRadius="10" HeightRequest="50" Clicked="Button_Clicked" />
+        </StackLayout>
+
+       
+    </ContentPage.Content>
+</ContentPage>

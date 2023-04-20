@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1Xamarin.Models"
+             xmlns:rf="clr-namespace:Rating;assembly=Rating"
+             x:Class="App1Xamarin.Views.BreadPage" x:DataType="local:ModelCats"
+             
+             Title="Breads"
+             >
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <CollectionView ItemsSource="{Binding ListBreads}" >
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout  Span="1" Orientation="Vertical" VerticalItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate >
+                    <DataTemplate x:DataType="local:Breads">
+                        <Frame VerticalOptions="Start" Background="#2000">
+                            <Grid ColumnSpacing="10"  VerticalOptions="Start" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="80"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="{Binding Images}" VerticalOptions="Fill"   Grid.Column="0"/>
+                                <StackLayout  Grid.Column="1"  VerticalOptions="Center">
+                                    <Label MinimumHeightRequest="40" Text="{Binding Title}" LineBreakMode="WordWrap" FontSize="20" TextColor="Black" FontAttributes="Bold"/>
+                                 
+                                    <rf:RatingBar SelectedStarValue="{Binding Reiting}"
+                                                  ImageHeight="15" ImageWidth="15" 
+                                                  FlowDirection="LeftToRight"
+                                                  EmptyStarImage="emptystar"
+                                                  FillStarImage="fillstar"
+                                                  >
+                                        
+                                    </rf:RatingBar>
+
+                                </StackLayout>
+
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

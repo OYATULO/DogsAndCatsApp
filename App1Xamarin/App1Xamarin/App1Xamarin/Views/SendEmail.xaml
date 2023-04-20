@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1Xamarin.Views.SendEmail" Title="Reset"
+            xmlns:customEntry="clr-namespace:App1Xamarin.Customcontroler"
+              Padding="20,50,20,0"
+             >
+    <ContentPage.Content>
+       
+        <StackLayout VerticalOptions="Start" Orientation="Vertical" HorizontalOptions="Center" >
+            <Image  Source="cat1"  Aspect="AspectFit"  WidthRequest="250" HeightRequest="250"  HorizontalOptions="Center"  VerticalOptions="Center"  />
+            <Label Text="Don't wory" TextColor="Black" FontSize="Medium" HorizontalTextAlignment="Start" FontAttributes="Bold"/>
+            <Label Text="for this you must reset your password asdfl asdkf asdf " TextColor="Gray" FontSize="14" TextType="Text" HorizontalTextAlignment="Start"/>
+            <Frame CornerRadius="10" BorderColor="Gray"  Margin="0,30,0,20" HasShadow="False" HeightRequest="5"  Background="white">
+                <Entry Text="" x:Name="Email" HorizontalTextAlignment="Start" Margin="0,-30,0,-30"  Placeholder="Entry your Email ..... " PlaceholderColor="Gray"/>
+            </Frame>
+           
+            <Button Text="send" BackgroundColor="Black" TextColor="white" CornerRadius="10" HeightRequest="50" Clicked="Button_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
